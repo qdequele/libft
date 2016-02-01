@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 15:27:56 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/01 12:31:42 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/01/30 14:41:27 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/*
+** NAME : strcmp
+** DESCRIPTION : La fonction strcmp() compare les deux chaînes s1 et s2. Elle
+** renvoie un entier négatif, nul, ou positif, si s1 est respectivement
+** inférieure, égale ou supérieure à s2.
+** PARAM : s1 -> la premiere chaine à comparé
+** PARAM : s2 -> la deuxieme chaine à comparé
+** RETURN : entier positif, nul, ou negatif
+*/
 
 int		ft_strcmp(const char *s1, const char *s2)
 {

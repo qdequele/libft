@@ -6,7 +6,7 @@
 #    By: qdequele <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 14:30:45 by qdequele          #+#    #+#              #
-#    Updated: 2015/12/08 10:45:09 by qdequele         ###   ########.fr        #
+#    Updated: 2016/01/30 15:04:32 by qdequele         ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -40,7 +40,7 @@ FT_MEM_SRC_O	= 	$(addprefix bin/,$(_FT_MEM_SRC_O))
 #Define FT_PRINT
 _FT_PRINT_SRC	= 	ft_putendl.c ft_putchar.c ft_putstr.c ft_putnbr.c\
 					ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
-					ft_putnbr_fd.c
+					ft_putnbr_fd.c ft_puttab.c
 
 FT_PRINT_SRC	= 	$(addprefix ft_print/,$(_FT_PRINT_SRC))
 _FT_PRINT_SRC_O	= 	$(patsubst %.c,%.o, $(_FT_PRINT_SRC))
@@ -53,7 +53,7 @@ _FT_STR_SRC		= 	ft_striter.c ft_striteri.c ft_strdel.c ft_strclr.c\
 					ft_strnew.c ft_strcat.c ft_strncat.c ft_strlcat.c \
 					ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcmp.c\
 					ft_strncmp.c ft_strchr.c ft_strrchr.c ft_strstr.c\
-					ft_strlen.c ft_strrev.c ft_strnstr.c
+					ft_strlen.c ft_strrev.c ft_strnstr.c ft_strfjoin.c
 
 FT_STR_SRC		= 	$(addprefix ft_str/,$(_FT_STR_SRC))
 _FT_STR_SRC_O	= 	$(patsubst %.c,%.o, $(_FT_STR_SRC))

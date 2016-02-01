@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/08 10:58:44 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/01/30 15:04:09 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ void				ft_memdel(void **ap);
 void				*ft_memalloc(size_t size);
 void				ft_putchar(char c);
 void				ft_putstr(char const *s);
+void				ft_puttab(char **tab);
 void				ft_putnbr(int n);
 void				ft_striter(char *s, void (*f)(char *));
 void				ft_strdel(char **as);
@@ -69,6 +70,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strfjoin(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strnew(size_t size);
