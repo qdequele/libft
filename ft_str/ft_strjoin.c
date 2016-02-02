@@ -15,7 +15,7 @@
 /*
 ** NAME : strjoin
 ** DESCRIPTION :  La fonction strjoin() concatenne deux chaine de caractere
-** dans une nouvelle chaine
+** dans une nouvelle chaine et ajoute un \0 a la fin
 ** PARAM : s1 -> la premiere chaine a concatenner
 ** PARAM : s2 -> la deuxieme chaine a concatenner
 ** RETURN : la chaine qui possedes les deux chaines concatenné

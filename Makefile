@@ -14,6 +14,13 @@
 NAME			= 	libft.a
 
 #Define FT_IS
+_FT_ARR_SRC		= 	ft_array_free.c 
+
+FT_ARR_SRC		=	$(addprefix ft_array/,$(_FT_ARR_SRC))
+_FT_ARR_SRC_O	= 	$(patsubst %.c,%.o, $(_FT_ARR_SRC))
+FT_ARR_SRC_O	= 	$(addprefix bin/,$(_FT_ARR_SRC_O))
+
+#Define FT_IS
 _FT_IS_SRC		= 	ft_isprint.c ft_isalnum.c ft_isascii.c ft_isalpha.c \
 					ft_isdigit.c ft_isnegative.c ft_isupper.c ft_islower.c
 
@@ -53,7 +60,8 @@ _FT_STR_SRC		= 	ft_striter.c ft_striteri.c ft_strdel.c ft_strclr.c\
 					ft_strnew.c ft_strcat.c ft_strncat.c ft_strlcat.c \
 					ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strcmp.c\
 					ft_strncmp.c ft_strchr.c ft_strrchr.c ft_strstr.c\
-					ft_strlen.c ft_strrev.c ft_strnstr.c ft_strfjoin.c
+					ft_strlen.c ft_strrev.c ft_strnstr.c ft_strfjoin.c\
+					ft_strcut.c
 
 FT_STR_SRC		= 	$(addprefix ft_str/,$(_FT_STR_SRC))
 _FT_STR_SRC_O	= 	$(patsubst %.c,%.o, $(_FT_STR_SRC))
@@ -70,9 +78,9 @@ FT_UTILS_SRC_O	= 	$(addprefix bin/,$(_FT_UTILS_SRC_O))
 
 
 #Define Global LIBFT files
-LIBFT_SRC		=	$(FT_IS_SRC) $(FT_LST_SRC) $(FT_MEM_SRC) $(FT_PRINT_SRC) $(FT_STR_SRC) $(FT_UTILS_SRC)
-_LIBFT_O_FILES	= 	$(_FT_IS_SRC_O) $(_FT_LST_SRC_O) $(_FT_MEM_SRC_O) $(_FT_PRINT_SRC_O) $(_FT_STR_SRC_O) $(_FT_UTILS_SRC_O)
-LIBFT_O_FILES	= 	$(FT_IS_SRC_O) $(FT_LST_SRC_O) $(FT_MEM_SRC_O) $(FT_PRINT_SRC_O) $(FT_STR_SRC_O) $(FT_UTILS_SRC_O)
+LIBFT_SRC		=	$(FT_ARR_SRC) $(FT_IS_SRC) $(FT_LST_SRC) $(FT_MEM_SRC) $(FT_PRINT_SRC) $(FT_STR_SRC) $(FT_UTILS_SRC)
+_LIBFT_O_FILES	= 	$(_FT_ARR_SRC_O) $(_FT_IS_SRC_O) $(_FT_LST_SRC_O) $(_FT_MEM_SRC_O) $(_FT_PRINT_SRC_O) $(_FT_STR_SRC_O) $(_FT_UTILS_SRC_O)
+LIBFT_O_FILES	= 	$(FT_ARR_SRC_O) $(FT_IS_SRC_O) $(FT_LST_SRC_O) $(FT_MEM_SRC_O) $(FT_PRINT_SRC_O) $(FT_STR_SRC_O) $(FT_UTILS_SRC_O)
 CFLAGS			=	-Wall -Wextra -Werror
 
 all: $(NAME)
