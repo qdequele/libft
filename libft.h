@@ -49,14 +49,9 @@ void				ft_memdel(void **ap);
 void				*ft_memmove(void *dest, const void *src, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_putchar(char c);
-<<<<<<< HEAD
-void				ft_putstr(char const *s);
-void				ft_puttab(char **tab);
-=======
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
->>>>>>> 3d90c7b04e2ca8cf20904ea5819b715875c6fb2f
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(char const *s);
@@ -90,11 +85,6 @@ void				ft_strrev(char *str);
 char				**ft_strsplit(char const *s, char c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
-<<<<<<< HEAD
-char				*ft_strjoin(char const *s1, char const *s2);
-char				*ft_strfjoin(char *s1, char *s2);
-=======
->>>>>>> 3d90c7b04e2ca8cf20904ea5819b715875c6fb2f
 char				*ft_strtrim(char const *s);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);

@@ -21,7 +21,7 @@
 ** PARAM : s2 -> la chaine dans laquel sera mis la fin de la chaine tronque
 */
 
-void ft_strcut(char **s1, char **s2, char c)
+void	ft_strcut(char **s1, char **s2, char c)
 {
 	char	**tab;
 
