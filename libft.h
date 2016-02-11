@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/11 10:29:22 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/11 11:25:07 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
+int					ft_get_next_line(int const fd, char **line);
 char				*ft_itoa(int n);
 char				*ft_itoa_base(int nb, int base);
 int					ft_nbrlen(int nb);
