@@ -3,14 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 12:39:33 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/01 16:53:27 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/01/30 14:38:56 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/*
+** NAME : strncmp
+** DESCRIPTION : La fonction strncmp() est identique à strcmp sauf qu'elle ne
+** compare que les n (au plus) premiers caractères de s1 et s2.
+** PARAM : s1 -> la premiere chaine à comparé
+** PARAM : s2 -> la deuxieme chaine à comparé
+** PARAM : n -> le nombre de caractere à comparer
+** RETURN : entier positif, nul, ou negatif
+*/
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
