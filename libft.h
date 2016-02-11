@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/11 11:25:07 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/11 11:33:16 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
+# define BUF_SIZE 1
 
 typedef struct		s_list
 {

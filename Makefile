@@ -6,14 +6,14 @@
 #    By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 14:30:45 by qdequele          #+#    #+#              #
-#    Updated: 2016/02/11 11:29:14 by qdequele         ###   ########.fr        #
+#    Updated: 2016/02/11 11:31:55 by qdequele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Define the libft
 NAME				=	libft.a
 
-#Define FT_IS
+#Define FT_ARR
 _FT_ARR_SRC			=	ft_array_free.c
 
 FT_ARR_SRC			=	$(addprefix ft_array/,$(_FT_ARR_SRC))

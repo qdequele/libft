@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 11:21:59 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/11 11:22:16 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/11 11:33:02 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_get_next_line(int const fd, char **line)
 			return (ft_strlen(str) > 0) ? ft_strcut(line, &str, '\0') : 0;
 		buf[ret] = '\0';
 		str = ft_strfjoin(str, buf);
-		return (get_next_line(fd, line));
+		return (ft_get_next_line(fd, line));
 	}
 	else
 		return (ft_strcut(line, &str, '\n'));
