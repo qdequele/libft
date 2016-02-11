@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/01/30 15:04:09 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/11 10:29:22 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char				*ft_strchr(const char *s, int c);
 void				ft_strclr(char *s);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dest, const char *src);
-void				ft_strcut(char **s1, char **s2, char c);
+int					ft_strcut(char **s1, char **s2, char c);
 void				ft_strdel(char **as);
 char				*ft_strdup(const char *s1);
 int					ft_strequ(char const *s1, char const *s2);
