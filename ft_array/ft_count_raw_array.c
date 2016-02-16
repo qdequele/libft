@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 17:08:26 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:09:22 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 15:28:37 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,9 @@ int		ft_count_raw_aoc(char **tab)
 	int		i;
 
 	i = 0;
-	while (tab[i])
-		i++;
+	if (tab && *tab)
+		while (tab[i])
+			i++;
 	return (i);
 }
 
@@ -42,8 +43,9 @@ int		ft_count_raw_aos(char ***tab)
 	int		i;
 
 	i = 0;
-	while (tab[i])
-		i++;
+	if (tab && *tab)
+		while (tab[i])
+			i++;
 	return (i);
 }
 

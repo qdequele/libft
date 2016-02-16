@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:18:37 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:23:26 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 15:40:37 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	***ft_join_aos(char ***last_array, char **to_add);
 char	**ft_join_aoc(char **last_array, char *to_add);
 int		**ft_join_aoi(int **last_array, int *to_add);
 void	ft_print_aoc(char **array);
-void	ft_print_aoi(int **array);
+void	ft_print_aoi(int **array, int width, int height);
 void	ft_print_aos(char ***array);
 
 #endif

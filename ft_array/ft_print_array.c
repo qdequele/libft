@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 10:23:44 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:16:47 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 15:43:22 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,18 +44,20 @@ void	ft_print_aoc(char **array)
 ** DESCRIPTION : Affiche un tableau d'entier avec des '\n' entre chaques\
 ** colonnes
 ** PARAM : Le tableau a afficher
+** PARAM : La largeur du tableau
+** PARAM : La haueur du tableau
 */
 
-void	ft_print_aoi(int **array)
+void	ft_print_aoi(int **array, int width, int height)
 {
 	int		i;
 	int		j;
 
 	i = 0;
-	while (array[i])
+	while (i < height)
 	{
 		j = 0;
-		while (array[i][j])
+		while (j < width)
 		{
 			ft_putnbr(array[i][j]);
 			ft_putchar('\t');
