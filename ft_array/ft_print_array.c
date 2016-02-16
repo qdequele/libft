@@ -6,11 +6,18 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 10:23:44 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:01:17 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 11:16:47 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+
+/*
+** NAME : ft_print_aoc (unnoficial)
+** DESCRIPTION : Affiche un tableau de caractere avec des '\n' entre chaques\
+** colonnes
+** PARAM : Le tableau a afficher
+*/
 
 void	ft_print_aoc(char **array)
 {
@@ -32,6 +39,13 @@ void	ft_print_aoc(char **array)
 	}
 }
 
+/*
+** NAME : ft_print_aoi (unnoficial)
+** DESCRIPTION : Affiche un tableau d'entier avec des '\n' entre chaques\
+** colonnes
+** PARAM : Le tableau a afficher
+*/
+
 void	ft_print_aoi(int **array)
 {
 	int		i;
@@ -51,6 +65,13 @@ void	ft_print_aoi(int **array)
 		i++;
 	}
 }
+
+/*
+** NAME : ft_print_aos (unnoficial)
+** DESCRIPTION : Affiche un tableau de chaine de caractere avec des '\n' entre\
+** chaques colonnes
+** PARAM : Le tableau a afficher
+*/
 
 void	ft_print_aos(char ***array)
 {

@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_print.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:28:29 by qdequele         ###   ########.fr       */
+/*   Created: 2016/02/16 11:19:59 by qdequele          #+#    #+#             */
+/*   Updated: 2016/02/16 11:24:58 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_PRINT_H
+# define FT_PRINT_H
 
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include "includes/ft_array.h"
-# include "includes/ft_is.h"
-# include "includes/ft_lst.h"
-# include "includes/ft_mem.h"
-# include "includes/ft_print.h"
-# include "includes/ft_str.h"
-# include "includes/ft_utils.h"
+void	ft_putchar(char c);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl(char const *s);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putnbr(int n);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putstr(char const *s);
+void	ft_putstr_fd(char const *s, int fd);
+void	ft_puttab(char **tab);
 
 #endif

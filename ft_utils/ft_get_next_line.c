@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 11:21:59 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/11 11:33:02 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 11:29:18 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 int		ft_get_next_line(int const fd, char **line)
 {
-	char			buf[BUF_SIZE + 1];
+	char			buf[BUFF_SIZE + 1];
 	static char		*str = NULL;
 	static int		ret;
 
-	if (fd < 0 || BUF_SIZE <= 0 || ret == -1)
+	if (fd < 0 || BUFF_SIZE <= 0 || ret == -1)
 		return (-1);
-	str = (!str) ? ft_strnew(BUF_SIZE) : str;
+	str = (!str) ? ft_strnew(BUFF_SIZE) : str;
 	if (!ft_strchr(str, '\n'))
 	{
-		if ((ret = read(fd, buf, BUF_SIZE)) == 0)
+		if ((ret = read(fd, buf, BUFF_SIZE)) == 0)
 			return (ft_strlen(str) > 0) ? ft_strcut(line, &str, '\0') : 0;
 		buf[ret] = '\0';
 		str = ft_strfjoin(str, buf);

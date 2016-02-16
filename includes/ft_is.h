@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_is.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:28:29 by qdequele         ###   ########.fr       */
+/*   Created: 2016/02/16 11:19:06 by qdequele          #+#    #+#             */
+/*   Updated: 2016/02/16 11:23:50 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef FT_IS_H
+# define FT_IS_H
 
-# include <unistd.h>
-# include <string.h>
-# include <stdlib.h>
-# include "includes/ft_array.h"
-# include "includes/ft_is.h"
-# include "includes/ft_lst.h"
-# include "includes/ft_mem.h"
-# include "includes/ft_print.h"
-# include "includes/ft_str.h"
-# include "includes/ft_utils.h"
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_islower(int c);
+int		ft_isnegative(int nb);
+int		ft_isprint(int c);
+int		ft_isupper(int c);
 
 #endif
