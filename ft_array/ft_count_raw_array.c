@@ -1,27 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_free.c                                    :+:      :+:    :+:   */
+/*   ft_count_raw_aoc.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 16:15:30 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/01 12:36:15 by qdequele         ###   ########.fr       */
+/*   Created: 2016/02/15 17:08:26 by qdequele          #+#    #+#             */
+/*   Updated: 2016/02/16 10:39:25 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_array_free(char **arr)
+int		ft_count_raw_aoc(char **tab)
 {
 	int		i;
 
 	i = 0;
-	while (arr[i])
-	{
-		free(arr[i]);
+	while (tab[i])
 		i++;
-	}
-	if (arr)
-		free(arr);
+	return (i);
+}
+
+int		ft_count_raw_aos(char ***tab)
+{
+	int		i;
+
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
+}
+
+int		ft_count_raw_aoi(int **tab)
+{
+	int		i;
+
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
 }

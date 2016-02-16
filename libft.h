@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:20:05 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/11 11:33:16 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/16 10:59:45 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdlib.h>
-# define BUF_SIZE 1
+# define BUF_SIZE 64
 
 typedef struct		s_list
 {
@@ -25,7 +25,21 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void				ft_array_free(char **arr);
+int					ft_count_column_aoc(char **tab);
+int					ft_count_column_aos(char ***tab);
+int					ft_count_column_aoi(int **tab);
+int					ft_count_raw_aoc(char **tab);
+int					ft_count_raw_aos(char ***tab);
+int					ft_count_raw_aoi(int **tab);
+void				ft_free_aoc(char **arr);
+void				ft_free_aoi(int **arr);
+void				ft_free_aos(char ***arr);
+char				***ft_join_aos(char ***last_array, char **to_add);
+char				**ft_join_aoc(char **last_array, char *to_add);
+int					**ft_join_aoi(int **last_array, int *to_add);
+void				ft_print_aoc(char **array);
+void				ft_print_aoi(int **array);
+void				ft_print_aos(char ***array);
 int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);

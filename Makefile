@@ -6,7 +6,7 @@
 #    By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 14:30:45 by qdequele          #+#    #+#              #
-#    Updated: 2016/02/11 11:31:55 by qdequele         ###   ########.fr        #
+#    Updated: 2016/02/16 10:57:51 by qdequele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@
 NAME				=	libft.a
 
 #Define FT_ARR
-_FT_ARR_SRC			=	ft_array_free.c
+_FT_ARR_SRC			=	ft_count_column_array.c ft_count_raw_array.c\
+						ft_free_array.c ft_join_array.c ft_print_array.c
 
 FT_ARR_SRC			=	$(addprefix ft_array/,$(_FT_ARR_SRC))
 _FT_ARR_SRC_O		=	$(patsubst %.c,%.o, $(_FT_ARR_SRC))
