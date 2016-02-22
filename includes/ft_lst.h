@@ -6,19 +6,19 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:19:04 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:28:22 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/02/19 17:18:24 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LST_H
 # define FT_LST_H
 
-typedef struct		s_list
+typedef struct	s_list
 {
-	void			*content;
-	size_t			content_size;
+	void					*content;
+	size_t				content_size;
 	struct s_list	*next;
-}					t_list;
+}								t_list;
 
 void	ft_lstadd(t_list **alst, t_list *new);
 void	ft_lstaddend(t_list **alst, t_list *new);
