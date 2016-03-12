@@ -31,7 +31,8 @@ FT_IS_SRC_O			=	$(addprefix bin/,$(_FT_IS_SRC_O))
 
 #Define FT_LST
 _FT_LST_SRC			=	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
-						ft_lstiter.c ft_lstmap.c ft_lstaddend.c
+						ft_lstiter.c ft_lstmap.c ft_lstaddend.c ft_lstsort.c\
+						ft_lstreverse.c
 
 FT_LST_SRC			=	$(addprefix ft_lst/,$(_FT_LST_SRC))
 _FT_LST_SRC_O		=	$(patsubst %.c,%.o, $(_FT_LST_SRC))

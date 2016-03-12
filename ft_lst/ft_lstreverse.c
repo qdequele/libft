@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_lstreverse.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,52 +12,19 @@
 
 #include "../libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
+t_list	*ft_lst_reverse(t_list *root)
 {
-	if (lst && f)
-	{
-		while (lst)
-		{
-			f(lst);
-			lst = lst->next;
-		}
-	}
-}
+	t_list *new_root;
+	t_list *next;
 
-void	ft_lstiter_plus(t_list *lst, void const *info, void (*f)(void const *info, t_list *elem))
-{
-	if (lst && f)
+	new_root = NULL;
+	next = NULL;
+	while (root)
 	{
-		while (lst)
-		{
-			f(info, lst);
-			lst = lst->next;
-		}
+		next = root->next;
+		root->next = new_root;
+		new_root = root;
+		root = next;
 	}
-}
-
-void	ft_lstiter_if(t_list *lst, void (*f)(t_list *elem), int (*c)(t_list *node))
-{
-	if (lst && f)
-	{
-		while (lst)
-		{
-			if (c(lst))
-				f(lst);
-			lst = lst->next;
-		}
-	}
-}
-
-void	ft_lstiter_if_plus(t_list *lst, void const *info, void (*f)(void const *info, t_list *elem), int (*c)(t_list *node))
-{
-	if (lst && f)
-	{
-		while (lst)
-		{
-			if (c(lst))
-				f(info, lst);
-			lst = lst->next;
-		}
-	}
+	return new_root;
 }

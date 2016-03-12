@@ -11,15 +11,17 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
-
+#include <stdio.h>
 void	ft_lstaddend(t_list **alst, t_list *new)
 {
 	t_list	*list;
 
 	list = *alst;
-	if (alst && new)
+	if (*alst == NULL && new)
+		*alst = new;
+	else
 	{
-		while (list)
+		while (list->next)
 		{
 			list = list->next;
 		}
