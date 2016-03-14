@@ -20,3 +20,10 @@ void	ft_putstr(char const *s)
 		s = s + 1;
 	}
 }
+
+void	ft_putstr_c(char *color, char const *s)
+{
+	ft_putstr(color);
+	ft_putstr(s);
+	ft_putstr("\e[0m");
+}
