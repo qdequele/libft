@@ -34,3 +34,10 @@ void	ft_putnbr(int n)
 		}
 	}
 }
+
+void	ft_putnbr_c(char *color, int n)
+{
+	ft_putstr(color);
+	ft_putnbr(n);
+	ft_putstr("\e[0m");
+}

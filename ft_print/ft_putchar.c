@@ -16,3 +16,10 @@ void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
+
+void	ft_putchar_c(char *color, char c)
+{
+	ft_putstr(color);
+	ft_putchar(c);
+	ft_putstr("\e[0m");
+}

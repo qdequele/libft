@@ -43,7 +43,9 @@ void	ft_lstiter_if(t_list *lst, void (*f)(t_list *elem), int (*c)(t_list *node))
 		while (lst)
 		{
 			if (c(lst))
+			{
 				f(lst);
+			}
 			lst = lst->next;
 		}
 	}
@@ -56,7 +58,9 @@ void	ft_lstiter_if_plus(t_list *lst, void const *info, void (*f)(void const *inf
 		while (lst)
 		{
 			if (c(lst))
+			{
 				f(info, lst);
+			}
 			lst = lst->next;
 		}
 	}
