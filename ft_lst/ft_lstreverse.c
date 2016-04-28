@@ -26,5 +26,5 @@ t_list	*ft_lst_reverse(t_list *root)
 		new_root = root;
 		root = next;
 	}
-	return new_root;
+	return (new_root);
 }

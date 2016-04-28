@@ -25,9 +25,12 @@ void				ft_lstaddend(t_list **alst, t_list *new);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *node));
-void				ft_lstiter_plus(t_list *lst, void const *info, void (*f)(void const *info, t_list *node));
-void				ft_lstiter_if(t_list *lst, void (*f)(t_list *node), int (*c)(t_list *node));
-void				ft_lstiter_if_plus(t_list *lst, void const *info, void (*f)(void const *info,t_list *node), int (*c)(t_list *node));
+void				ft_lstiter_plus(t_list *lst, void const *info,
+	void (*f)(void const *info, t_list *node));
+void				ft_lstiter_if(t_list *lst, void (*f)(t_list *node),
+	int (*c)(t_list *node));
+void				ft_lstiter_if_plus(t_list *lst, void const *info,
+	void (*f)(void const *info, t_list *node), int (*c)(t_list *node));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *node));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lst_bubble_sort(t_list *node, int (*c)(t_list *node));

@@ -18,7 +18,7 @@ void	ft_lst_bubble_sort(t_list *node, int (*c)(t_list *node))
 	int			swapped;
 	t_list		*ptr1;
 	t_list		*lptr;
- 
+
 	lptr = NULL;
 	swapped = 1;
 	while (swapped)
@@ -41,6 +41,7 @@ void	ft_lst_bubble_sort(t_list *node, int (*c)(t_list *node))
 void	ft_lst_swap(t_list *node1, t_list *node2)
 {
 	void	*temp;
+
 	temp = node1->content;
 	node1->content = node2->content;
 	node2->content = temp;

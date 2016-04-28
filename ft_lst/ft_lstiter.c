@@ -24,7 +24,8 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 	}
 }
 
-void	ft_lstiter_plus(t_list *lst, void const *info, void (*f)(void const *info, t_list *elem))
+void	ft_lstiter_plus(t_list *lst, void const *info,
+	void (*f)(void const *info, t_list *elem))
 {
 	if (lst && f)
 	{
@@ -36,7 +37,8 @@ void	ft_lstiter_plus(t_list *lst, void const *info, void (*f)(void const *info, 
 	}
 }
 
-void	ft_lstiter_if(t_list *lst, void (*f)(t_list *elem), int (*c)(t_list *node))
+void	ft_lstiter_if(t_list *lst, void (*f)(t_list *elem),
+	int (*c)(t_list *node))
 {
 	if (lst && f)
 	{
@@ -51,7 +53,8 @@ void	ft_lstiter_if(t_list *lst, void (*f)(t_list *elem), int (*c)(t_list *node))
 	}
 }
 
-void	ft_lstiter_if_plus(t_list *lst, void const *info, void (*f)(void const *info, t_list *elem), int (*c)(t_list *node))
+void	ft_lstiter_if_plus(t_list *lst, void const *info,
+	void (*f)(void const *info, t_list *elem), int (*c)(t_list *node))
 {
 	if (lst && f)
 	{
