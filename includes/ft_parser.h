@@ -19,9 +19,9 @@ typedef struct	s_option
 	int			used;
 }				t_option;
 
-void			option_illegal_err(t_option *l_options, int nb_opts,
+void			option_illegal_err(t_option **l_options, int nb_opts,
 	char opt, char *prog_name);
-void			options_parser(t_option *l_options, int nb_opts,
+int			options_parser(t_option **l_options, int nb_opts,
 	char **cmds, char *prog_name);
 
 #endif

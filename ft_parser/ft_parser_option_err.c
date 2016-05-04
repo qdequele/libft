@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-static char	*options_usage(t_option *l_options, int nb_opts)
+static char	*options_usage(t_option **l_options, int nb_opts)
 {
 	int		i;
 	char	*usage;
@@ -21,13 +21,13 @@ static char	*options_usage(t_option *l_options, int nb_opts)
 	usage = ft_strnew(nb_opts);
 	while (i < nb_opts)
 	{
-		usage[i] = l_options[i].name;
+		usage[i] = l_options[i]->name;
 		i++;
 	}
 	return (usage);
 }
 
-void		option_illegal_err(t_option *l_options, int nb_opts, char opt,
+void		option_illegal_err(t_option **l_options, int nb_opts, char opt,
 	char *prog_name)
 {
 	ft_putstr_fd(prog_name, 2);
@@ -39,5 +39,4 @@ void		option_illegal_err(t_option *l_options, int nb_opts, char opt,
 	ft_putstr_fd(" [", 2);
 	ft_putstr_fd(options_usage(l_options, nb_opts), 2);
 	ft_putendl_fd("]", 2);
-	exit(0);
 }

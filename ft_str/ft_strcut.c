@@ -31,3 +31,30 @@ int	ft_strcut(char **s1, char **s2, char c)
 	*s2 = ft_strsub(*s2, ft_strlen(*s1) + 1, ft_strlen(*s2) - ft_strlen(*s1));
 	return (1);
 }
+
+char	*ft_strcut_before(char **str, char c)
+{
+	char	**tab;
+
+	tab = ft_strsplit(*str, c);
+	return (ft_strdup(tab[0]));
+}
+
+char	*ft_strcut_after(char **str, char c)
+{
+	char	**tab;
+	char	*after;
+	int		i;
+
+	i = 1;
+	tab = ft_strsplit(*str, c);
+	if (tab[i])
+		after = ft_strdup(tab[i]);
+	i++;
+	while (tab[i])
+	{
+		ft_strfjoin(ft_strfjoin(after, &c), tab[i]);
+		i++;
+	}
+	return (after);
+}

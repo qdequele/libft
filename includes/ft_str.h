@@ -20,6 +20,8 @@ void	ft_strclr(char *s);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strcpy(char *dest, const char *src);
 int		ft_strcut(char **s1, char **s2, char c);
+char	*ft_strcut_before(char **str, char c);
+char	*ft_strcut_after(char **str, char c);
 void	ft_strdel(char **as);
 char	*ft_strdup(const char *s1);
 int		ft_strequ(char const *s1, char const *s2);

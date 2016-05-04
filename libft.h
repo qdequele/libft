@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdlib.h>
 # include <math.h>
+# include <stdio.h>
 # include "includes/ft_array.h"
 # include "includes/ft_is.h"
 # include "includes/ft_lst.h"
