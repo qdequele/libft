@@ -22,7 +22,7 @@
 ** RETURN : return always 1 when the function is finished
 */
 
-int	ft_strcut(char **s1, char **s2, char c)
+int		ft_strcut(char **s1, char **s2, char c)
 {
 	char	**tab;
 

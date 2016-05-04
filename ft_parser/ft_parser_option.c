@@ -47,7 +47,7 @@ static int	options_used(t_option **l_options, int nb_opts, char *opts,
 	return (1);
 }
 
-int		options_parser(t_option **l_options, int nb_opts, char **cmds,
+int			options_parser(t_option **l_options, int nb_opts, char **cmds,
 	char *prog_name)
 {
 	int	i;
