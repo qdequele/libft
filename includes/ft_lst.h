@@ -22,6 +22,7 @@ typedef struct		s_list
 
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstaddend(t_list **alst, t_list *new);
+int					ft_lstcount(t_list *lst);
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstiter(t_list *lst, void (*f)(t_list *node));
@@ -36,4 +37,5 @@ t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lst_bubble_sort(t_list *node, int (*c)(t_list *node));
 void				ft_lst_swap(t_list *node1, t_list *node2);
 t_list				*ft_lst_reverse(t_list *root);
+void				ft_lstcpy(t_list **dest, t_list *src);
 #endif

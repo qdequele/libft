@@ -13,6 +13,7 @@
 #ifndef FT_STR_H
 # define FT_STR_H
 
+char	**ft_str_to_tab(char const *s);
 char	*ft_strcat(char *dest, const char *src);
 char	*ft_strchr(const char *s, int c);
 void	ft_strclr(char *s);

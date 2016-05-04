@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lstcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,11 @@
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+void	ft_lstcpy(t_list **dest, t_list *src)
 {
-	t_list	*list;
-
-	list = *alst;
-	if (*alst == NULL && new)
+	while (src)
 	{
-		*alst = new;
-	}
-	else
-	{
-		while (list->next)
-		{
-			list = list->next;
-		}
-		list->next = new;
+		ft_lstaddend(dest, ft_lstnew(src->content, src->content_size));
+		src = src->next;
 	}
 }

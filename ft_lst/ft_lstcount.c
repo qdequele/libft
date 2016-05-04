@@ -12,21 +12,20 @@
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+int		ft_lstcount(t_list *lst)
 {
-	t_list	*list;
+	int		i;
+	t_list	*elem;
 
-	list = *alst;
-	if (*alst == NULL && new)
+	i = 0;
+	elem = lst;
+	if (elem)
 	{
-		*alst = new;
-	}
-	else
-	{
-		while (list->next)
+		while (elem)
 		{
-			list = list->next;
+			i++;
+			elem = elem->next;
 		}
-		list->next = new;
 	}
+	return (i);
 }

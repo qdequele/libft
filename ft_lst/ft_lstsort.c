@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
 void	ft_lst_bubble_sort(t_list *node, int (*c)(t_list *node))
 {
