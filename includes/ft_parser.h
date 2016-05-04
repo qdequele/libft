@@ -23,5 +23,6 @@ void			option_illegal_err(t_option **l_options, int nb_opts,
 	char opt, char *prog_name);
 int				options_parser(t_option **l_options, int nb_opts,
 	char **cmds, char *prog_name);
+void			option_init(t_option **l_options, int nb_opts);
 
 #endif

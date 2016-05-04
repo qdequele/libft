@@ -18,9 +18,7 @@ void	ft_lstaddend(t_list **alst, t_list *new)
 
 	list = *alst;
 	if (*alst == NULL && new)
-	{
 		*alst = new;
-	}
 	else
 	{
 		while (list->next)

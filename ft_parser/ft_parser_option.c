@@ -12,6 +12,18 @@
 
 #include "../libft.h"
 
+void		option_init(t_option **l_options, int nb_opts)
+{
+	int	i;
+
+	i = 0;
+	while (i < nb_opts)
+	{
+		l_options[i]->used = 0;
+		i++;
+	}
+}
+
 static int	option_used(t_option **l_options, int nb_opts, char opt)
 {
 	int	i;
