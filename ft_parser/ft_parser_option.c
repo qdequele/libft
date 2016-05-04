@@ -19,7 +19,7 @@ static void	options_init(t_option *l_options, int nb_opts)
 	i = 0;
 	while (i < nb_opts)
 	{
-		l_options[i]->used = 0;
+		l_options[i].used = 0;
 		i++;
 	}
 }
@@ -31,9 +31,9 @@ static int	option_used(t_option *l_options, int nb_opts, char opt)
 	i = 0;
 	while (i < nb_opts)
 	{
-		if (l_options[i]->name == opt)
+		if (l_options[i].name == opt)
 		{
-			l_options[i]->used = 1;
+			l_options[i].used = 1;
 			return (1);
 		}
 		i++;
@@ -49,11 +49,10 @@ static void	options_used(t_option *l_options, int nb_opts, char *opts,
 	i = 1;
 	while (opts[i])
 	{
-		if (option_used(l_options, nb_opts, opt) == 0)
+		if (option_used(l_options, nb_opts, opts[i]) == 0)
 			option_illegal_err(l_options, nb_opts, opts[i], prog_name);
 		i++;
 	}
-	return (0);
 }
 
 void		options_parser(t_option *l_options, int nb_opts, char **cmds,

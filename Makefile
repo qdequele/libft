@@ -54,9 +54,9 @@ _FT_MEM_SRC_O		=	$(patsubst %.c,%.o, $(_FT_MEM_SRC))
 FT_MEM_SRC_O		=	$(addprefix bin/,$(_FT_MEM_SRC_O))
 
 #Define FT_MEM
-_FT_PARSER_SRC		=	ft_parser_otpion.c ft_parser_option_err.c
+_FT_PARSER_SRC		=	ft_parser_option.c ft_parser_option_err.c
 
-FT_PARSER_SRC		=	$(addprefix ft_mem/,$(_FT_PARSER_SRC))
+FT_PARSER_SRC		=	$(addprefix ft_parser/,$(_FT_PARSER_SRC))
 _FT_PARSER_SRC_O	=	$(patsubst %.c,%.o, $(_FT_PARSER_SRC))
 FT_PARSER_SRC_O		=	$(addprefix bin/,$(_FT_PARSER_SRC_O))
 

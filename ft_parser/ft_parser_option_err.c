@@ -21,7 +21,7 @@ static char	*options_usage(t_option *l_options, int nb_opts)
 	usage = ft_strnew(nb_opts);
 	while (i < nb_opts)
 	{
-		usage[i] = l_options[i]->name;
+		usage[i] = l_options[i].name;
 		i++;
 	}
 	return (usage);
@@ -32,7 +32,8 @@ void		option_illegal_err(t_option *l_options, int nb_opts, char opt,
 {
 	ft_putstr_fd(prog_name, 2);
 	ft_putstr_fd(": illegal option -- ", 2);
-	ft_putendl_fd(opt, 2);
+	ft_putchar_fd(opt, 2);
+	ft_putchar_fd('\n', 2);
 	ft_putstr_fd("usage : ", 2);
 	ft_putstr_fd(prog_name, 2);
 	ft_putstr_fd(" [", 2);
