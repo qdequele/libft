@@ -20,6 +20,13 @@ typedef struct	s_color {
 	double		b;
 }				t_color;
 
+typedef struct	s_gnl
+{
+	char		buf[BUFF_SIZE + 1];
+	char		*str;
+	int			ret;
+}				t_gnl;
+
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 t_color			*ft_create_color_rgb(int r, int g, int b);

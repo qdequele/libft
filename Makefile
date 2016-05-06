@@ -89,8 +89,8 @@ _FT_UTILS_SRC		=	ft_atoi.c ft_itoa.c ft_bzero.c ft_toupper.c ft_tolower.c\
 						ft_itoa_base.c ft_get_next_line.c ft_colors.c
 
 FT_UTILS_SRC		=	$(addprefix ft_utils/,$(_FT_UTILS_SRC))
-_FT_UTILS_SRC_O	=	$(patsubst %.c,%.o, $(_FT_UTILS_SRC))
-FT_UTILS_SRC_O	=	$(addprefix bin/,$(_FT_UTILS_SRC_O))
+_FT_UTILS_SRC_O		=	$(patsubst %.c,%.o, $(_FT_UTILS_SRC))
+FT_UTILS_SRC_O		=	$(addprefix bin/,$(_FT_UTILS_SRC_O))
 
 
 #Define Global LIBFT files
@@ -103,7 +103,7 @@ _LIBFT_O_FILES		=	$(_FT_ARR_SRC_O) $(_FT_IS_SRC_O) $(_FT_LST_SRC_O)\
 LIBFT_O_FILES		=	$(FT_ARR_SRC_O) $(FT_IS_SRC_O) $(FT_LST_SRC_O)\
 						$(FT_MEM_SRC_O) $(FT_PRINT_SRC_O) $(FT_STR_SRC_O)\
 						$(FT_UTILS_SRC_O) $(FT_MATRIX_SRC_O) $(FT_PARSER_SRC_O)
-CFLAGS				=	-Wall -Wextra -Werror
+CFLAGS				=	-Wall -Wextra -Werror -ggdb -g
 
 all: $(NAME)
 
