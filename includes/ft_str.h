@@ -41,6 +41,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
 char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strrchr_n(const char *s, int c);
 void	ft_strrev(char *str);
 char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *s1, const char *s2);

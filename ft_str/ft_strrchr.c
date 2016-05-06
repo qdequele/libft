@@ -18,13 +18,22 @@ char	*ft_strrchr(const char *s, int c)
 
 	s2 = s + ft_strlen(s);
 	while (*s2 != (char)c && s2 != s)
-	{
 		if (*s2 != (char)c)
 			s2--;
-	}
 	if (*s2 == (char)c)
-	{
 		return ((char *)s2);
-	}
+	return (NULL);
+}
+
+char	*ft_strrchr_n(const char *s, int c)
+{
+	const char	*s2;
+
+	s2 = s + ft_strlen(s);
+	while (*s2 != (char)c && s2 != s)
+		if (*s2 != (char)c)
+			s2--;
+	if (*s2 == (char)c)
+		return ((char *)++s2);
 	return (NULL);
 }
