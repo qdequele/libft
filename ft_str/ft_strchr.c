@@ -30,6 +30,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (NULL);
 }
+
 /*
 ** NAME : strchr_n
 ** DESCRIPTION : Rechercher un caractère dans une chaîne
@@ -37,6 +38,7 @@ char	*ft_strchr(const char *s, int c)
 ** PARAM : c -> le caractere a rechercher
 ** RETURN : Le pointeur du caractere apres celui qui est recherché recherché
 */
+
 char	*ft_strchr_n(const char *s, int c)
 {
 	while (*s && *s != (char)c)
