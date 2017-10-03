@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_printf_printf_flags.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2015/11/24 14:12:26 by qdequele          #+#    #+#             */
+/*   Updated: 2016/10/26 19:11:10 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+int			console_flag_s(va_list ap)
 {
-	t_list	*list;
+	char	*s;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
-	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
-	}
+	s = va_arg(ap, char *);
+	ft_console_log(s);
+	return (ft_strlen(s));
+}
+
+int			console_flag_c(va_list ap)
+{
+	char	c;
+
+	c = (char)va_arg(ap, int);
+	ft_console_log_char(c);
+	return (1);
+}
+
+int			console_flag_d(va_list ap)
+{
+	char	*d;
+
+	d = ft_itoa(va_arg(ap, int));
+	ft_console_log(d);
+	return (ft_strlen(d));
 }

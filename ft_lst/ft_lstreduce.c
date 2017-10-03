@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lstreduce.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2015/12/07 10:23:19 by qdequele          #+#    #+#             */
+/*   Updated: 2015/12/07 11:12:54 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+t_list	*ft_lstreduce(t_list *lst, int (*f)(t_list *elem))
 {
-	t_list	*list;
+	t_list	*res;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
+	if (!lst || !f)
+		return (NULL);
+	res = NULL;
+	while (lst)
 	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
+		if (f(lst) && lst != NULL)
+			ft_lstaddend(&res, lst);
+		lst = lst->next;
 	}
+	return (res);
 }

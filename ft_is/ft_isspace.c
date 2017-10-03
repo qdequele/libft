@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2015/11/24 16:15:30 by qdequele          #+#    #+#             */
+/*   Updated: 2016/10/18 17:55:41 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+int		ft_isspace(int c)
 {
-	t_list	*list;
-
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
-	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
-	}
+	return (c == ' ' || c == '\t' || c == '\n' || c == '\0');
 }

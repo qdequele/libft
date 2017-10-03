@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_array_to_string.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2016/02/16 10:32:29 by qdequele          #+#    #+#             */
+/*   Updated: 2016/10/26 13:06:04 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+char	*ft_array_to_string(char **tab)
 {
-	t_list	*list;
+	int		i;
+	char	*str;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
+	i = 0;
+	str = ft_strnew(1);
+	while (tab[i])
 	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
+		if (i > 0)
+			str = ft_strfjoin(str, " ");
+		str = ft_strfjoin(str, tab[i]);
+		i++;
 	}
+	return (str);
 }

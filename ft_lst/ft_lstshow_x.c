@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lstshow_x.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2016/04/09 17:23:19 by qdequele          #+#    #+#             */
+/*   Updated: 2016/04/21 16:49:09 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+void	ft_lstshow_x(t_list *list, int x)
 {
-	t_list	*list;
+	t_list	*cur;
+	char	c;
+	int		i;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
+	i = 0;
+	cur = list;
+	while (i < x)
 	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
+		cur = cur->next;
+		i++;
+	}
+	while (cur)
+	{
+		c = *((char *)cur->content);
+		ft_putchar(c);
+		cur = cur->next;
 	}
 }

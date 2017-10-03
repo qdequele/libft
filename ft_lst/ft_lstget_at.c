@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_lstget_at.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2015/12/07 09:57:54 by qdequele          #+#    #+#             */
+/*   Updated: 2016/10/14 15:52:43 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+t_list	*ft_lstget_at(t_list *lst, int at)
 {
-	t_list	*list;
+	int i;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
+	i = 0;
+	while (lst)
 	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
+		if (i == at)
+			return (lst);
+		lst = lst->next;
+		i++;
 	}
+	return (NULL);
 }

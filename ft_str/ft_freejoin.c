@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_freejoin.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 13:14:26 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/01 12:41:09 by qdequele         ###   ########.fr       */
+/*   Created: 2016/02/27 19:49:34 by qdequele          #+#    #+#             */
+/*   Updated: 2016/02/28 19:40:03 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_freejoin(char *s1, char *s2)
 {
-	if (n == -2147483648)
-		ft_putstr_fd("-2147483648", fd);
-	else
-	{
-		if (n < 0)
-		{
-			n = -n;
-			ft_putchar_fd('-', fd);
-		}
-		if (n >= 10)
-		{
-			ft_putnbr_fd(n / 10, fd);
-			ft_putnbr_fd(n % 10, fd);
-		}
-		else
-			ft_putchar_fd('0' + n, fd);
-	}
-}
+	char *ret;
 
-void	ft_putnbr_fd_c(char *color, int n, int fd)
-{
-	ft_putstr_fd(color, fd);
-	ft_putnbr_fd(n, fd);
-	ft_putstr_fd("\e[0m", fd);
+	if (s1 == NULL && s2 == NULL)
+		return (NULL);
+	if (s1 == NULL)
+	{
+		ret = ft_strdup(s2);
+		return (ret);
+	}
+	if (s2 == NULL)
+	{
+		ret = (ft_strdup(s1));
+		ft_strdel(&(s1));
+		return (ret);
+	}
+	if (s1 != NULL && s2 != NULL)
+	{
+		ret = (ft_strjoin(s1, s2));
+		ft_strdel(&(s1));
+		return (ret);
+	}
+	return (NULL);
 }

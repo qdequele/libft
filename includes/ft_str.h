@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:19:56 by qdequele          #+#    #+#             */
-/*   Updated: 2016/02/16 11:25:25 by qdequele         ###   ########.fr       */
+/*   Updated: 2016/10/27 14:18:02 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void	ft_strdel(char **as);
 char	*ft_strdup(const char *s1);
 int		ft_strequ(char const *s1, char const *s2);
 char	*ft_strfjoin(char *s1, char *s2);
+char	*ft_strffjoin(char *s1, char *s2);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f) (unsigned int, char *s));
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -47,5 +48,7 @@ char	**ft_strsplit(char const *s, char c);
 char	*ft_strstr(const char *s1, const char *s2);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s);
+char	*ft_freejoin(char *s1, char *s2);
+char	*ft_skip_char(char *str, char c);
 
 #endif

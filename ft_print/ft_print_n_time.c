@@ -1,28 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
+/*   ft_print_n_time.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
+/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/07 10:14:23 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/31 18:23:54 by qdequele         ###   ########.fr       */
+/*   Created: 2015/11/24 14:12:26 by qdequele          #+#    #+#             */
+/*   Updated: 2015/11/24 14:21:19 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_lstaddend(t_list **alst, t_list *new)
+void		ft_print_n_time(char c, int n)
 {
-	t_list	*list;
+	int	i;
 
-	list = *alst;
-	if ((*alst == NULL || (*alst)->content == NULL) && new)
-		*alst = new;
-	else
+	i = 1;
+	while (i < n)
 	{
-		while (list->next)
-			list = list->next;
-		list->next = new;
+		ft_putchar(c);
+		i++;
+	}
+}
+
+void		ft_print_n_time_fd(char c, int n, int fd)
+{
+	int	i;
+
+	i = 1;
+	while (i < n)
+	{
+		ft_putchar_fd(c, fd);
+		i++;
 	}
 }
