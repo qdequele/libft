@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:10:47 by qdequele          #+#    #+#             */
-/*   Updated: 2015/12/05 13:11:16 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:47:31 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,26 @@ char	*ft_itoa(int t)
 	while ((len-- + neg) > neg)
 	{
 		str[len + neg] = (n % 10) + '0';
+		n = n / 10;
+	}
+	return (str);
+}
+
+char	*ft_uitoa(size_t t)
+{
+	char			*str;
+	size_t			len;
+	long long int	n;
+
+	n = t;
+	len = ft_nbrlen(n);
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	str[len] = '\0';
+	while ((len--) > 0)
+	{
+		str[len] = (n % 10) + '0';
 		n = n / 10;
 	}
 	return (str);

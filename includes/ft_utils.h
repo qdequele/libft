@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:19:53 by qdequele          #+#    #+#             */
-/*   Updated: 2016/10/29 15:10:24 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:46:22 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ t_color			*ft_create_color_rgb(int r, int g, int b);
 t_color			*ft_create_color_hex(int hex_color);
 int				ft_get_next_line(int const fd, char **line);
 char			*ft_itoa(int n);
+char			*ft_uitoa(size_t t);
 char			*ft_itoa_base(int nb, int base);
 int				ft_nbrlen(int nb);
 int				ft_nbrlen_base(int nb, int base);

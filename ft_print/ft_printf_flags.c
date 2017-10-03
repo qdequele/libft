@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:12:26 by qdequele          #+#    #+#             */
-/*   Updated: 2017/10/03 09:46:17 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:44:24 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,13 @@ int			printf_flag_p(va_list ap)
 	ft_putstr("0x");
 	ft_putstr(d);
 	return (ft_strlen(d) + 2);
+}
+
+int			printf_flag_z(va_list ap)
+{
+	char	*d;
+
+	d = ft_itoa(va_arg(ap, int));
+	ft_putstr(d);
+	return (ft_strlen(d));
 }

@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:19:59 by qdequele          #+#    #+#             */
-/*   Updated: 2017/10/03 10:19:35 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:46:55 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 # define LIGHT_BLUE "\e[94m"
 # define LIGHT_MAGENTA "\e[95m"
 # define LIGHT_CYAN "\e[96m"
-# define NB_PRINTF_FLAG 4
+# define NB_PRINTF_FLAG 5
 # define NB_CONSOLE_FLAG 3
 
 typedef struct	s_flag
@@ -47,7 +47,9 @@ void			ft_putendl(char const *s);
 void			ft_putendl_fd(char const *s, int fd);
 void			ft_putendl_fd_c(char *color, char const *s, int fd);
 void			ft_putnbr(int n);
+void			ft_putuint(size_t n);
 void			ft_putnbr_c(char *color, int n);
+void			ft_putuint_c(char *color, size_t n);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_fd_c(char *color, int n, int fd);
 void			ft_putstr(char const *s);
@@ -61,6 +63,7 @@ int				printf_flag_s(va_list ap);
 int				printf_flag_c(va_list ap);
 int				printf_flag_d(va_list ap);
 int				printf_flag_p(va_list ap);
+int				printf_flag_z(va_list ap);
 int				ft_console(const char *format, ...);
 int				ft_console_checkflag(char flag, va_list args);
 int				console_flag_s(va_list ap);

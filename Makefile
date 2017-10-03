@@ -6,7 +6,7 @@
 #    By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 14:30:45 by qdequele          #+#    #+#              #
-#    Updated: 2016/11/06 20:23:04 by qdequele         ###   ########.fr        #
+#    Updated: 2017/10/03 11:41:09 by qdequele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,18 +87,32 @@ FT_UTILS_SRC		=	$(addprefix ft_utils/,$(_FT_UTILS_SRC))
 SRC					=	$(FT_ARR_SRC) $(FT_IS_SRC) $(FT_LST_SRC) $(FT_MEM_SRC)\
 						$(FT_PRINT_SRC) $(FT_STR_SRC) $(FT_UTILS_SRC) $(FT_MATRIX_SRC)\
 						$(FT_PARSER_SRC)
+
+_INCLUDES_FILES		=	ft_array.h\
+						ft_is.h\
+						ft_lst.h\
+						ft_matrix.h\
+						ft_mem.h\
+						ft_parser.h\
+						ft_print.h\
+						ft_str.h\
+						ft_utils.h\
+
+INCLUDES_FILES		=	$(addprefix includes/,$(_INCLUDES_FILES))
+						
 INCLUDES			=	./includes/
 OBJ					=	$(SRC:.c=.o)
 CFLAGS				=	-Wall -Wextra -Werror -g -ggdb
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(INCLUDES_FILES)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo $(NAME) " - compiled"
 
 %.o: %.c
+	@echo -n .
 	@$(CC) $(CFLAGS) -c $< -o $@ -I $(INCLUDES)
 
 clean:

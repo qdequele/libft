@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 14:12:26 by qdequele          #+#    #+#             */
-/*   Updated: 2017/10/03 09:12:59 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:44:06 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ t_flag	g_flag_printf_tab[NB_PRINTF_FLAG] =
 	{'d', &printf_flag_d},
 	{'s', &printf_flag_s},
 	{'p', &printf_flag_p},
+	{'z', &printf_flag_z},
 };
 
 int			ft_printf(const char *format, ...)

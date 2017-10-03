@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: qdequele <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 15:04:57 by qdequele          #+#    #+#             */
-/*   Updated: 2015/11/30 16:32:24 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 11:43:43 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,27 @@ void	ft_putnbr(int n)
 	}
 }
 
+void	ft_putuint(size_t n)
+{
+	if (n >= 10)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+	{
+		ft_putchar('0' + n);
+	}
+}
+
 void	ft_putnbr_c(char *color, int n)
+{
+	ft_putstr(color);
+	ft_putnbr(n);
+	ft_putstr("\e[0m");
+}
+
+void	ft_putuint_c(char *color, size_t n)
 {
 	ft_putstr(color);
 	ft_putnbr(n);
