@@ -6,7 +6,7 @@
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/16 11:19:59 by qdequele          #+#    #+#             */
-/*   Updated: 2017/10/03 11:46:55 by qdequele         ###   ########.fr       */
+/*   Updated: 2017/10/03 14:33:14 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void			ft_putnbr(int n);
 void			ft_putuint(size_t n);
 void			ft_putnbr_c(char *color, int n);
 void			ft_putuint_c(char *color, size_t n);
+void			ft_puthex(void *ptr);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putnbr_fd_c(char *color, int n, int fd);
 void			ft_putstr(char const *s);

@@ -6,7 +6,7 @@
 #    By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 14:30:45 by qdequele          #+#    #+#              #
-#    Updated: 2017/10/03 11:41:09 by qdequele         ###   ########.fr        #
+#    Updated: 2017/10/03 14:32:48 by qdequele         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ _FT_PRINT_SRC		=	ft_putendl.c ft_putchar.c ft_putstr.c ft_putnbr.c\
 						ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c\
 						ft_putnbr_fd.c ft_puttab.c ft_print_n_time.c\
 						ft_printf.c ft_printf_flags.c ft_console.c\
-						ft_console_flags.c
+						ft_console_flags.c ft_puthex.c
 
 FT_PRINT_SRC		=	$(addprefix ft_print/,$(_FT_PRINT_SRC))
 

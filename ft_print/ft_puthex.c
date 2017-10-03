@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: qdequele <qdequele@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/08 10:02:34 by qdequele          #+#    #+#             */
-/*   Updated: 2017/10/03 15:59:19 by qdequele         ###   ########.fr       */
+/*   Created: 2015/11/24 14:12:26 by qdequele          #+#    #+#             */
+/*   Updated: 2017/10/03 16:05:34 by qdequele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_itoa_base(int nb, int base)
+void			ft_puthex(void *ptr)
 {
-	char			*str;
+	char			str[50];
 	size_t			len;
-	size_t			neg;
 	long long int	n;
-
-	n = nb;
-	len = ft_nbrlen_base(n, base);
-	neg = ft_isnegative(n);
-	str = (char *)malloc(sizeof(char) * (neg + len + 1));
-	if (str == NULL)
-		return (NULL);
-	str[len + neg] = '\0';
-	if (neg)
+	
+	ft_putstr("0x");
+	n = (long long int)ptr;
+	len = ft_nbrlen_base(n, 16);
+	str[len] = '\0';
+	while ((len--) > 0)
 	{
-		str[0] = '-';
-		n = -n;
+		str[len] = (n % 16) + ((n % 16) > 9 ? 'a' - 10 : '0');
+		n = n / 16;
 	}
-	while ((len-- + neg) > neg)
-	{
-		str[len + neg] = (n % base) + ((n % base) > 9 ? 'A' - 10 : '0');
-		n = n / base;
-	}
-	return (str);
+	ft_putstr(str);
 }
